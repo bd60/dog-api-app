@@ -23,3 +23,4 @@ export type DogPicture = string;
 
 export type DogPictureApiResponse = GenericDogApiResponse<DogPicture>;
 
+// View Models
