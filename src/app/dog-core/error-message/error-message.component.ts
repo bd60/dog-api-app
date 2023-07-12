@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
-import { ErrorHandlerService } from '../error-handler.service';
+import { ErrorHandlerService } from '../services/error-handler.service';
 
 @Component({
   selector: 'daa-error-message',
