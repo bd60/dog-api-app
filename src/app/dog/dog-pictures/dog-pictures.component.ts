@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map, switchMap } from 'rxjs';
+import { switchMap } from 'rxjs';
 import { DogService } from '../services/dog.service';
 
 @Component({
@@ -12,6 +12,6 @@ import { DogService } from '../services/dog.service';
 export class DogPicturesComponent {
   dogImages$ = this.route.params.pipe(
     switchMap(({breed}) => this.dogService.getBreedPictureList(breed)),
-  )
+  );
   constructor(private dogService: DogService, private route: ActivatedRoute) {}
 }
