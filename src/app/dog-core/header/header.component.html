@@ -1,6 +1,6 @@
 <mat-toolbar>
-    <button *ngIf="showBack$ | async" routerLink=".." mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <a *ngIf="showBack$ | async" routerLink=".." mat-icon-button>
         <mat-icon>arrow_back</mat-icon>
-      </button>
+    </a>
     <span>Dog API Browser</span>
 </mat-toolbar>
