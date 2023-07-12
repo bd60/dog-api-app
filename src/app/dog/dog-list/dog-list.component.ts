@@ -11,14 +11,15 @@ import { map, shareReplay, Observable } from 'rxjs';
 })
 export class DogListComponent {
   dogList$: Observable<DogListView> = this.dogService.getDogs().pipe(
-    map(resp => Object.entries(resp).map(([breed]) => this.toDogView(breed)))
+    map(resp => Object.entries(resp).map(([breed, subBreeds]) => this.toDogView(breed, subBreeds)))
   );
   constructor(private dogService: DogService) {}
 
-  private toDogView(breed: string): DogView {
+  private toDogView(breed: string, subBreeds: string[]): DogView {
     return {
       breed,
       image$: this.dogService.getRandomBreedPicture(breed).pipe(shareReplay(1)),
+      subBreeds: subBreeds.join(', ') || 'None',
     }
   }
 }

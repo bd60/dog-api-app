@@ -1,6 +1,9 @@
 <div class="dog-list">
     <mat-card class="dog-card" *ngFor="let dog of dogList$ | async">
         <img [src]="dog.image$ | async" mat-card-image>
-        <div class="breed"><a routerLink="/{{dog.breed}}">{{dog.breed}}</a></div>
+        <div class="breed">
+            <a routerLink="/{{dog.breed}}">{{dog.breed | titlecase}}</a>
+            <span class="sub-breeds">Sub Breeds: {{dog.subBreeds | titlecase}}</span>
+        </div>
     </mat-card>
 </div>

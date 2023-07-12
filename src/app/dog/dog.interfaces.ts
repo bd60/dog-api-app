@@ -26,7 +26,8 @@ export type DogPictureApiResponse = GenericDogApiResponse<DogPicture>;
 
 // View Models
 export interface DogView {
-    breed: string,
+    breed: string;
+    subBreeds: string;
     image$: Observable<string>;
 }
 
