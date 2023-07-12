@@ -11,10 +11,13 @@
         img {
             height: 150px;
             object-fit: contain;
+            background-color: $app-blue;
         }
         .breed {
             height: 40px;
             margin: 5px;
+            display: flex;
+            align-items: center;
             a {
                 text-decoration: none;
                 color: $app-black;
