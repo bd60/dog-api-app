@@ -1,4 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { map, switchMap } from 'rxjs';
+import { DogService } from '../services/dog.service';
 
 @Component({
   selector: 'daa-dog-pictures',
@@ -7,5 +10,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DogPicturesComponent {
-
+  dogImages$ = this.route.params.pipe(
+    switchMap(({breed}) => this.dogService.getBreedPictureList(breed)),
+  )
+  constructor(private dogService: DogService, private route: ActivatedRoute) {}
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { pipe, throwError, EMPTY } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import { ErrorHandlerService } from '../../core/error-handler.service';
+import { ErrorHandlerService } from '../../dog-core/error-handler.service';
 import { 
     DogListApiResponse, 
     GenericDogApiResponse, 

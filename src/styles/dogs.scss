@@ -1,0 +1,57 @@
+@import 'variables';
+
+.dog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 16px;
+    .dog-card {
+        margin-bottom: 20px;
+        width: calc(25% - 20px);
+        img {
+            height: 150px;
+            object-fit: contain;
+        }
+        .breed {
+            height: 40px;
+            margin: 5px;
+            a {
+                text-decoration: none;
+                color: $app-black;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:0px)  {
+    .dog-list {
+        .dog-card {
+            width: calc(100% - 20px);
+        }
+    }
+}
+@media (min-width:801px)  {
+    .dog-list {
+        .dog-card {
+            width: calc(50% - 20px);
+        }
+    }
+}
+@media (min-width:1025px) {
+    .dog-list {
+        .dog-card {
+            width: calc(33% - 20px);
+        }
+    }
+}
+
+@media (min-width:1400px) {
+    .dog-list {
+        .dog-card {
+            width: calc(25% - 20px);
+        }
+    }
+}

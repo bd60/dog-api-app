@@ -1,3 +1,4 @@
+import { Observable } from "rxjs";
 
 // API Response Interfaces and Constants
 export enum ApiStatusResponse {
@@ -24,3 +25,9 @@ export type DogPicture = string;
 export type DogPictureApiResponse = GenericDogApiResponse<DogPicture>;
 
 // View Models
+export interface DogView {
+    breed: string,
+    image$: Observable<string>;
+}
+
+export type DogListView = DogView[];

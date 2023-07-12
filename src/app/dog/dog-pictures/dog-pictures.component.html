@@ -1,1 +1,6 @@
-<p>dog-pictures works!</p>
+
+<div class="dog-list">
+    <mat-card class="dog-card" *ngFor="let image of dogImages$ | async">
+        <img [src]="image" mat-card-image>
+    </mat-card>
+</div>
